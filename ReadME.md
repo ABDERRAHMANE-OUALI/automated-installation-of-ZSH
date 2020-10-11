@@ -23,7 +23,15 @@ At First you need to Open PowerShell in administration mode :
                 wsl --set-default-version 2
              ```
 * Now Set Your Linux Disto to either WSL or WSL2
-    * First back to PowerShell with admin access and You can check the WSL version assigned to each of the Linux distributions you have installed
+    * First back to PowerShell with admin access and You can check the WSL version assigned to each of  the Linux distributions you have installed
         *   ```bash
                 wsl --list --verbose
              ```
+    * Choose the linux Distro you want to set which veriosn of WSL to run with either WSL or WSL2
+        *   ```bash
+                wsl --set-version <distribution name> <versionNumber>
+            ```
+    * if you want to set all linux Distro to WSL2 you can set WSL2 as default architecture
+        *   ```bash
+                wsl --set-default-version 2
+            ```
