@@ -2,6 +2,12 @@
 
 set -e
 
+Installing-tools(){
+    sudo apt install git curl python3
+    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+}
+
 Installing-ZSH() {
     echo "Installing ZSH..."
     sudo apt install zsh
@@ -24,4 +30,4 @@ Adding-Syntax-highlighting-Auto-complete() {
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting && rm -rf zsh-syntax-highlighting
     echo -e "\e[1;32m Success Added Syntax-highlighting-Auto-complete"
 }
-Installing-ZSH && Installing-Oh-My-ZSH && Adding-plugins && Syntax-highlighting-Auto-complete
+Installing-tools && Installing-ZSH && Installing-Oh-My-ZSH && Adding-plugins && Syntax-highlighting-Auto-complete
