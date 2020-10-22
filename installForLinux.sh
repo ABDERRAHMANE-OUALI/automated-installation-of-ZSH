@@ -3,7 +3,7 @@
 set -e
 
 Installing-tools(){
-    sudo apt install git curl python3
+    sudo apt install git curl python3 python3-pip
     curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
     sudo apt-get install -y nodejs
 }
